@@ -1,11 +1,9 @@
-import React,  { createContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
-
-export const Context = createContext(null);
 
 var firebaseConfig = {
     apiKey: "AIzaSyATpWKqjzQCk4pGPsBJixE4-uhivcczmno",
@@ -19,17 +17,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth(); // Создали обьект с помощью которого будем авторизовываться
-const firestore = firebase.firestore();
-
-
 ReactDOM.render(
-    <Context.Provider value={{
-        firebase,
-        auth,
-        firestore
-    }}>
-        <App />
-    </Context.Provider>,
+    <App />,
     document.getElementById('root')
 );

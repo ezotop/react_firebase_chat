@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-export const Context = createContext(null);
+const Context = createContext(null);
 
 var firebaseConfig = {
     apiKey: "AIzaSyATpWKqjzQCk4pGPsBJixE4-uhivcczmno",
